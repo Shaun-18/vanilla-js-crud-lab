@@ -1,25 +1,56 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>User</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h2>User Registration</h2>
-<form class=userform id=userform>
-    <label for="Name">Name:</label>
-    <input type="text" id="Name" name="Name">
 
-    <br>
+<div class="page-container">
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email">
-    <br>
-    <button type="submit">Register</button>
-    <button type="view">View</button>
-</form>
+    <form class="userfrm" id="userform">
+
+        <div class="form-header">
+            <h2>User Registration</h2>
+        </div>
+
+        <div class="input-group">
+            <label for="Name">Name</label>
+            <input
+                    type="text"
+                    id="Name"
+                    name="Name"
+                    placeholder="Enter your name"
+                    required
+            >
+        </div>
+
+        <div class="input-group">
+            <label for="email">Email Address</label>
+            <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="example@email.com"
+                    required
+            >
+        </div>
+
+        <div class="button-group">
+            <button type="submit" class="register-btn">
+                Register User
+            </button>
+
+            <button type="button" class="view-btn">
+                View Users
+            </button>
+        </div>
+
+    </form>
+
+</div>
+
 </body>
 </html>
