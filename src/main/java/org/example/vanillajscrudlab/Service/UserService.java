@@ -40,7 +40,7 @@ public class UserService {
 
     // Read All Users
     @Transactional(readOnly = true)
-    public List<UserResponse> getAllPeople() {
+    public List<UserResponse> getAllUsers() {
 
         return userRepository.findAll()
                 .stream()
@@ -50,7 +50,7 @@ public class UserService {
 
     // Read One User
     @Transactional(readOnly = true)
-    public UserResponse getPeopleById(long id) {
+    public UserResponse getUsersById(long id) {
 
         User user = findUserOrThrow(id);
 
@@ -59,7 +59,7 @@ public class UserService {
 
     // Update User
     @Transactional
-    public UserResponse updatePeople(long id, UserRequest request) {
+    public UserResponse updateUser(long id, UserRequest request) {
 
         User user = findUserOrThrow(id);
 
