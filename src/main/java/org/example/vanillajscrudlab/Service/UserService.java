@@ -6,10 +6,12 @@ import org.example.vanillajscrudlab.Entity.User;
 import org.example.vanillajscrudlab.Exceptions.DuplicateResourceException;
 import org.example.vanillajscrudlab.Exceptions.ResourceNotFoundException;
 import org.example.vanillajscrudlab.Repository.UserRepository;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+@Service
 public class UserService {
     private final UserRepository userRepository;
 
