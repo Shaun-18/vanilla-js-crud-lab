@@ -1,12 +1,10 @@
-
-/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Page background */
+
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background: #0f172a;
@@ -14,42 +12,28 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 30px 20px;
 }
 
-/* Background decoration */
 .page-container {
     width: 100%;
-    max-width: 450px;
+    max-width: 750px;
     position: relative;
 }
 
-/* Registration card */
 .userfrm {
     background: #1e293b;
     padding: 40px 35px;
     border-radius: 20px;
     border: 1px solid #334155;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    margin-bottom: 25px;
 }
 
-/* Header */
+
 .form-header {
     text-align: center;
     margin-bottom: 35px;
-}
-
-.icon {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, #8b5cf6, #6366f1);
-    color: white;
-    font-size: 30px;
-    border-radius: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto 20px;
 }
 
 h2 {
@@ -58,12 +42,7 @@ h2 {
     margin-bottom: 10px;
 }
 
-.form-header p {
-    color: #94a3b8;
-    font-size: 14px;
-}
 
-/* Input fields */
 .input-group {
     margin-bottom: 24px;
 }
@@ -97,7 +76,7 @@ input:focus {
     box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
 }
 
-/* Buttons */
+
 .button-group {
     display: flex;
     flex-direction: column;
@@ -106,7 +85,6 @@ input:focus {
 }
 
 button {
-    width: 100%;
     padding: 15px;
     border: none;
     border-radius: 10px;
@@ -116,7 +94,7 @@ button {
     transition: all 0.3s ease;
 }
 
-/* Register button */
+
 .register-btn {
     background: linear-gradient(135deg, #8b5cf6, #6366f1);
     color: white;
@@ -127,7 +105,6 @@ button {
     box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
 }
 
-/* View button */
 .view-btn {
     background: #334155;
     color: #e2e8f0;
@@ -139,21 +116,136 @@ button {
     transform: translateY(-2px);
 }
 
-/* Footer */
-.footer-text {
-    text-align: center;
-    color: #64748b;
-    font-size: 12px;
-    margin-top: 30px;
+
+.users-container {
+    background: #1e293b;
+    padding: 30px 35px;
+    border-radius: 20px;
+    border: 1px solid #334155;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
 }
 
-/* Mobile responsiveness */
-@media (max-width: 480px) {
-    .userfrm {
-        padding: 30px 22px;
+.users-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 8px;
+}
+
+.users-header h2 {
+    font-size: 23px;
+}
+
+.users-subtitle {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.refresh-btn {
+    background: #334155;
+    color: #c4b5fd;
+    border: 1px solid #475569;
+}
+
+.refresh-btn:hover {
+    background: #475569;
+}
+
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 450px;
+}
+
+thead {
+    background: #0f172a;
+}
+
+th {
+    color: #a78bfa;
+    font-size: 13px;
+    text-align: left;
+    padding: 15px;
+}
+
+td {
+    color: #e2e8f0;
+    font-size: 14px;
+    padding: 15px;
+    border-bottom: 1px solid #334155;
+}
+
+tbody tr:hover {
+    background: #263449;
+}
+
+/* Delete button */
+.delete-btn {
+    background: #7f1d1d;
+    color: #fecaca;
+    padding: 9px 15px;
+    font-size: 12px;
+}
+
+.delete-btn:hover {
+    background: #b91c1c;
+    transform: translateY(-2px);
+}
+
+.empty-message {
+    text-align: center;
+    color: #94a3b8;
+    padding: 25px;
+}
+
+/* Success and error messages */
+.message {
+    display: none;
+    padding: 14px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.message.success {
+    display: block;
+    background: #064e3b;
+    color: #a7f3d0;
+    border: 1px solid #059669;
+}
+
+.message.error {
+    display: block;
+    background: #7f1d1d;
+    color: #fecaca;
+    border: 1px solid #ef4444;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+
+    .userfrm,
+    .users-container {
+        padding: 25px 18px;
     }
 
     h2 {
-        font-size: 24px;
+        font-size: 23px;
+    }
+
+    .users-header h2 {
+        font-size: 19px;
+    }
+
+    .users-header {
+        flex-wrap: wrap;
     }
 }

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Registration</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
 <div class="page-container">
+
 
     <form class="userfrm" id="userform">
 
@@ -23,6 +26,7 @@
                     id="Name"
                     name="Name"
                     placeholder="Enter your name"
+                    maxlength="50"
                     required
             >
         </div>
@@ -42,13 +46,47 @@
             <button type="submit" class="register-btn">
                 Register User
             </button>
-
-            <button type="button" class="view-btn">
-                View Users
-            </button>
         </div>
 
     </form>
+
+
+    <div id="message" class="message"></div>
+
+    <!-- Registered Users Table -->
+    <section class="users-container" id="usersSection">
+
+        <div class="users-header">
+            <h2>Registered Users</h2>
+
+        </div>
+
+        <p class="users-subtitle">
+            Manage your registered users below.
+        </p>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+
+                <tbody id="userTableBody">
+                <tr>
+                    <td colspan="4" class="empty-message">
+                        Click View Users to load records.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </section>
 
 </div>
 
